@@ -1,0 +1,98 @@
+#game_map{
+
+	width: 900px; /* 23 columns 40x40 per block*/
+	height: 600px; /* 15 rows 40x40 per block*/
+	border-style: solid;
+	border-width: 10px;
+	border-color: black;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white; 
+	position: relative;
+
+}
+
+#scoreDiv{
+	background-color: white;
+}
+
+.guard{
+	width: 40px;/*25 blocks l and r */   
+	height: 60px;/* 15 blocks up and down */
+	background-color: red; 
+	position: absolute;
+	left: 0px;
+	top:0px;
+}
+
+#gary{
+
+	width: 40px;/*25 blocks l and r */   
+	height: 60px;/* 15 blocks up and down */
+	position: absolute;
+	margin: 0;
+	padding: 0;
+
+}
+
+.girl{
+	width: 40px;/*25 blocks l and r */   
+	height: 60px;/* 15 blocks up and down */
+	/*background-color: red; */
+	position: absolute;
+}
+
+body{
+
+	background-color: black; 
+
+}
+
+.topBarrier{
+
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	position: absolute;
+	left: 55px;
+	top: 60px;
+
+}
+
+
+.midBarrier{
+
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	position: absolute;
+	left: 55px;
+	top: 260px;
+
+}
+
+.botBarrier{
+
+	width: 80px;
+	height: 80px;
+	background-color: blue;
+	position: absolute;
+	left: 55px;
+	top: 460px;
+
+}
+
+#column1, #column3, #column5{
+	background-color: yellow;
+	width: 20%;
+	height: 600px;
+	float: left;
+	position: relative;
+}
+#column2, #column4{
+	background-color: orange;
+	width: 20%;
+	height: 600px;
+	float: left;
+	position: relative;
+}
