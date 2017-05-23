@@ -1,0 +1,585 @@
+/*=====================================GAME PANELS*/
+@font-face{
+	font-family: Agency FB;
+	src: url(Agency_FB.ttf);
+}
+
+body{
+	background-color: black;
+	font-family: Agency FB;
+	font-weight: bold; 
+}
+
+.gameScreen{
+	width: 1200px; /* 23 columns 40x40 per block*/
+	height: 600px; /* 15 rows 40x40 per block*/
+	border-style: solid;
+	border-width: 10px;
+	border-color: black;
+	/*background-color: white; */
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+}
+
+#scorePage, #aboutPage, #helpPage{
+	background-color: white;
+}
+
+.gameScreen h1{
+	font-size: 60px;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin: auto;
+}
+
+.hide{
+	display: none;
+}
+
+#gameStart{
+	background: rgb(0,0,0,);
+	animation-name: changeColors;
+	animation-duration:0.5s;
+	animation-iteration-count: infinite;
+	animation-delay: 7s;
+}
+
+.gameIntro{
+	position: relative;
+	width: 100%;
+}
+
+.gameIntro #logo{
+	margin-left: 280px;
+	margin-top: 40px;
+}
+
+.gameButtons{
+	padding: 10px;
+	width: 150px;
+	height: 50px;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.gameButtons > button, .back{
+	font-family: Agency FB;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 5px;
+	border: solid #000 3px;
+	background-color: #fff;
+
+}
+
+#buttonPanel{
+	/*width: 90px;*/
+	position: fixed;
+	top: 30px;
+	left: 1180px;
+}
+
+.gameButtons > button:hover{
+	border: #242628;
+	color: #242628;
+	cursor: pointer;
+}
+
+.characters{
+	position: absolute;
+	left: -100px;
+}
+
+#guardIntro{
+	top: 500px;
+	animation-name: guardMoves;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-delay: 7s;
+	animation-timing-function: linear;
+	animation-direction: alternate;
+	/*left: 200px;*/
+}
+
+#woofIntro{
+	/*left: 200px;*/
+	animation-name: woofMoves;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-delay: 7s;
+}
+
+#garyIntro{
+	left: -40px;
+	animation-name: garyFlies;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	animation-delay: 7s;
+
+}
+
+.hokageTable{
+	border: 5px solid black;
+	font-size: 15px;
+	margin: auto;
+	width: 500px;
+	text-align: center;
+}
+
+.hokageTable *{
+	padding: 10px 20px;
+}
+
+.hokageTable > th,td{
+	border-bottom: 1px solid #ddd;
+}
+
+@keyframes woofMoves{
+	0%{
+		left: 200px;
+	}
+	25%{
+		display: none;
+	}
+	50%{
+		top: 40px;
+		left: 1000p	x;
+		width: 100px;
+		height: 150px;
+	}
+	75%{
+		display: none;
+	}
+	100%{
+		left: 200px	;
+	}
+}
+
+@keyframes guardMoves{
+	0%{
+		left: -100px;
+	}
+	25%{
+		left: 1500px;
+		top: 500px;
+	}
+	50%{
+		left: 1500px;
+		top: 50px;
+	}
+	75%{
+		width: 80px;
+		height: 112px;
+		left: -100px;
+		top: 50px;
+	}
+	100%{		
+		width: 80px;
+		height: 112px;
+		left: -100px;
+		top: 500px;
+	}
+}
+
+@keyframes changeColors{
+	0%{
+		background-color: rgb(0,0,0);
+	}
+	25%{
+		background-color: rgba(255, 0, 0, 0.2);
+	}
+	30%{
+		background-color: rgb(255, 255, 255);
+	}
+	50%{
+		background-color: rgba(0, 0, 255, 0.2);
+	}
+	55%{
+		background-color: rgb(255, 255, 255);
+	}
+	75%{
+		background-color: rgba(0, 255, 0, 0.2);
+	}
+	80%{
+		background-color: rgb(255, 255, 255);
+	}
+	100%{
+		background-color: rgb(0,0,0);
+	}
+}
+
+@keyframes garyFlies{
+	0%{
+		left: -40px;
+		top:-40px;
+		width: 100px;
+		height: 150px;
+	}
+	12.5%{
+		left: 1200px;
+		top: 50px;
+		transform: rotate(45deg);
+	}
+	25%{
+		left: -40px;
+		top: 600px;
+		transform: rotate(100deg);
+	}
+	26%{
+		width: 40px;
+		height: 60px;
+		transform: rotate(360deg);
+	}
+	37.5%{
+		left: 800px;
+		top: -60px;
+		transform: rotate(650deg);
+	}
+	40%{
+		width: 150px;
+		height: 225px;
+	}
+	50%{
+		left: 1200px;
+		top: 600px;
+		transform: rotate(720deg);
+	}
+	62.5%{
+		left: -40px;
+		top: 200px;
+	}
+	63%{
+		width: 20px;
+		height: 30px;
+	}
+	75%{
+		left: 1200px;
+		top: 200px;
+	}
+	87.5%{
+		left: 300px;
+		top: 600px;
+	}
+	88%{
+		width: 40px;
+		height: 60px;
+	}
+	100%{
+		left: -40px;
+		top: -60px;
+	}
+
+}
+
+.back{
+	padding: 5px 10px;
+	margin-left: 10px;
+
+}
+.back:hover{
+	border: solid;
+	border-color: #242628;
+	color: #242628;
+	cursor: pointer;
+}
+
+/*=====================================SCORE/STATUS BOARD*/
+#scoreDiv{
+	background-color: white;
+	width: 294px;
+	height: 600px; /* 15 rows 40x40 per block*/
+	float: right;
+	background-color: white;
+	color: #000;
+	font-family: Agency FB;
+	font-size: 20px;
+}
+
+.statusPanel{
+	padding: 5px;
+	border-bottom: solid #000 3px;
+	overflow: hidden;
+	position: relative;
+}
+
+.statusPanel * {
+	margin: auto;
+}
+
+#scoreAdded{
+	top: -10px;
+	color: green;
+	position: absolute;
+	font-family: Agency FB;
+	font-size: 90%;
+	right: 0px;
+}
+
+#scoreDiv .controlsPanel > h1{
+	margin: 0;
+}
+
+#scoreDiv .controlsPanel{
+	border-bottom: solid #000 3px;
+}
+
+#scoreDiv .controls{
+	/*padding-top: 30px;*/
+	margin-left: 75px;
+}
+
+#scoreDiv .controls> div{
+	padding: 0 5px 5px 5px;
+	overflow: visible;
+}
+
+#scoreDiv .arrows{
+	width: 40px;
+	height: 40px;
+}
+
+#scoreDiv .space{
+	width: 128px;
+	height: 40px;
+}
+
+#Aup{
+	margin-left: 44.5px;
+}
+/*=====================================HELP PAGE*/
+
+#helpPage > .controls, #helpPage > .scoring, #helpPage > .mechanics{
+	margin-left: 110px;
+}
+
+#helpPage .arrows{
+	width: 50px;
+	height: 50px;
+}
+
+#helpPage .space{
+	width: 100px;
+	height: 50px;
+}
+
+#helpPage .controls{
+	width: 250px;
+	float: left;
+}
+#helpPage>.controls .labels, #helpPage>.controls .symbols{
+	float: left;
+	width: 100px;
+	padding: 5px;
+	margin: auto;
+}
+#helpPage>.controls .symbols>span, #helpPage>.controls .labels>h2{
+	height: 50px;
+	margin: 0px;
+}
+
+#helpPage .scoring{
+	float: left;
+	width: 120px;
+}
+
+#helpPage .scoring .symbols>span{
+	width: 120px;
+	float: left;
+} 
+
+#helpPage .scoring.symbols>span>img{
+	margin: auto;
+}
+
+#helpPage .mechanics{
+	width: 400px;
+	float: left;
+}
+
+
+/*=====================================SCORES*/
+.hokageTable{
+	border: 5px solid black;
+	font-size: 20px;
+	margin: auto;
+}
+
+.hokageTable *{
+	padding: 10px 20px;
+}
+
+/*=====================================ABOUT*/
+#aboutPage h2{
+	font-size: 50px;
+}
+
+.paragraph{
+	font-size: 25px;
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+.storyline > p{
+	font-size: 25px;
+}
+
+.storyline, .creators{
+	width: 40%;
+	float: left;
+	margin-left: 5%;
+	text-align: center;
+}
+
+.creators > img{
+	width: %;
+	height: 20%;
+}
+
+
+
+
+/*=====================================GAME PROPER*/
+
+#gameMap{
+	width: 900px; /* 23 columns 40x40 per block*/
+	height: 600px; /* 15 rows 40x40 per block*/
+	float: right;
+	position: relative;
+	border: solid;
+	background-image: url("resources/Tiles1.png");
+}
+
+#gameLights{
+	opacity: 0.3;
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+
+.meter{	
+	width: 60px;
+	height: 10%;
+	top: -30px;
+	background-color: green;
+	position: absolute;
+	display: none;
+}
+
+.meterPanel{
+	width: 100%;
+	height: 40px;
+	/*background-color: green;*/
+}
+
+.meterPanel > h1{
+	margin: 0;
+}
+
+#meterBig{
+	width: 100%;
+	height: 100%;
+	background-color: green;
+}
+
+
+.girl>img{
+	width: 100%;
+	height: 100%;
+}
+
+#gary{
+
+	width: 40px;/*25 blocks l and r */   
+	height: 60px;/* 15 blocks up and down */
+	position: absolute;
+	margin: 0;
+	padding: 0;
+
+}
+
+.girl{
+	width: 40px;/*25 blocks l and r */   
+	height: 60px;/* 15 blocks up and down */
+	position: absolute;
+}
+
+.girlExpression{
+	position: absolute;
+	top: 0px;
+	transform: rotate(-15deg);
+}
+
+.barrier{
+	width: 40px;
+	height: 300px;
+	position: absolute;
+}
+.guard{
+	width: 149px;
+	height: 210px;
+	position: absolute;
+	border-left: dashed 5px red;
+	border-right: dashed 5px red;
+	/*background-color: rgba(255, 0, 0, 0.3);*/
+	/*opacity: 0.3;*/
+	border-color: rgba(255, 0, 0, 0.3);
+
+}
+
+.guard > img{
+	width: 50px;
+	height: 70px;
+	margin-left: 50px;
+}
+
+.gazeUp{
+	width: 0;
+	height:0;
+	opacity: 0.3;
+	border-left: 74.5px solid transparent;
+	border-right: 74.5px solid transparent;
+	border-top: 70px solid red;
+	border-radius: 0;
+}
+
+.gazeDown{
+	width: 0;
+	height:0;
+	opacity: 0.3;
+	border-left: 74.5px solid transparent;
+	border-right: 74.5px solid transparent;
+	border-bottom: 70px solid red;
+	border-radius: 0;
+}
+
+.columns{
+	width: 20%;
+	height: 600px;
+	float: left;
+	position: relative;
+}
+.barrierImages{
+	position: absolute;
+}
+#barrierImageBottom1{
+	bottom: 0px;
+	left: 14px;
+}
+#barrierImageBottom2{
+	bottom: 0px;
+	left: 374px;
+}
+#barrierImageTop1{
+	top: 0px;
+	left: 194px;
+}
+#barrierImageTop2{
+	top: 0px;
+	left: 554px;
+}

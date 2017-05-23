@@ -1,0 +1,238 @@
+<html>
+<head>
+	<title> Grinding Gary </title>
+	<link href="GG.css" rel="stylesheet"/>
+	<!-- <script src="GG.js" type="text/javascript"></script> -->
+</head>
+<body>
+	<div id="gameStart" class="gameScreen">
+		<!-- <div id="background" ></div> -->
+		<div class="gameIntro">
+			<img id="logo" src="resources/GrindingGaryText.png" />
+			<div class="gameButtons">
+				<button id="start" class="gameButtons"> Start </button>
+				<button id="help" class="gameButtons"> Help </button>
+				<button id="scores" class="gameButtons"> Hokage Board </button>
+				<button id="about" class="gameButtons"> About </button>
+			</div>
+		</div>
+		<img id="garyIntro" class="characters" src="resources/GaryMovesLeft.gif" />
+		<img id="woofIntro" class="characters" src="resources/WoofDance.gif" />
+		<img id="meowIntro" class="characters" src="resources/MeowDance.gif" />
+		<img id="kokakIntro" class="characters" src="resources/KokakDance.gif" />
+		<img id="guardIntro" class="characters" src="resources/GuardRoams.gif" />
+	</div>
+	<div id="cover" class="gameScreen hide">
+		<div id="gameMap">
+			<div id="column1" class="columns">
+				<div id="guard1" class="guard">
+					<div class="gazeUp"></div>
+					<img src="resources/GuardRoams.gif">
+					<div class="gazeDown"></div>
+				</div>
+				<div id="girl1" class="girl"><img src="" />
+					<div id="exp1" class="girlExpression hide">
+						<img src="resources/Yak.png" />
+					</div>
+				</div>
+				<div id="barrier1" class="barrier" ></div>   		
+			</div>
+			<div id="column2" class="columns">
+				<div id="guard2" class="guard" style="display: none;">
+					<div class="gazeUp"></div>
+					<img src="resources/GuardRoams.gif">
+					<div class="gazeDown"></div>
+				</div>
+				<div id="girl2" class="girl"><img src="" />
+					<div id="exp2" class="girlExpression hide">
+						<img src="resources/Yak.png" />
+					</div>
+				</div>
+				<div id="barrier2" class="barrier" ></div> 
+			</div>
+			<div id="column3" class="columns">
+				<div id="guard3" class="guard">
+					<div class="gazeUp"></div>
+					<img src="resources/GuardRoams.gif">
+					<div class="gazeDown"></div>
+				</div>
+				<div id="girl3" class="girl"><img src="" />
+					<div id="exp3" class="girlExpression hide">
+						<img src="resources/Yak.png" />
+					</div>
+				</div>
+			 	<div id="barrier3" class="barrier" ><img src="" /></div>      
+			</div>
+			<div id="column4" class="columns">
+				<div id="guard4" class="guard" style="display: none;">
+					<div class="gazeUp"></div>
+					<img src="resources/GuardRoams.gif">
+					<div class="gazeDown"></div>
+				</div>
+				<div id="girl4" class="girl"><img src="" />
+					<div id="exp4" class="girlExpression hide">
+						<img src="resources/Yak.png" />
+					</div>
+				</div>
+				 <div id="barrier4" class="barrier" ><img src="" />
+				 </div>  
+			</div>
+			<div id="column5" class="columns">
+				<div id="guard5" class="guard">
+					<div class="gazeUp"></div>
+					<img src="resources/GuardRoams.gif">
+					<div class="gazeDown"></div>
+				</div>
+				<div id="girl5" class="girl"><img src="" />
+					<div id="exp5" class="girlExpression hide">
+						<img src="resources/Yak.png" />
+					</div>
+				</div>
+			</div>
+			<div id="gary"><img src="resources/GaryStandLeft.png" />
+			</div>	
+			<div id="barrierImageBottom1" class="barrierImages"><img src="resources/BarrierFinal.gif" /></div>
+			<div id="barrierImageBottom2" class="barrierImages"><img src="resources/BarrierFinal.gif" /></div>
+			<div id="barrierImageTop1" class="barrierImages"><img src="resources/BarrierFinal.gif" /></div>
+			<div id="barrierImageTop2" class="barrierImages"><img src="resources/BarrierFinal.gif" /></div>
+			<img src="resources/LightsSample.gif" id="gameLights" />
+		</div>
+		<div id="scoreDiv">
+			<div class="statusPanel">
+				<h1>Score:
+					<span id="score">0</span>
+					<span id="scoreAdded"></span>
+				</h1>
+			</div>
+			<div class="statusPanel">
+				<h2>Confidence:
+					<span id="life"> </span>
+				</h2>
+			</div>
+			<div class="statusPanel">
+				<h1>Time Left:
+					<span id="time"> </span>
+				</h1>
+			</div>
+			<div class="controlsPanel">
+				<h1>Controls:</h1>
+				<div class="controls">
+					<div>
+						<img id="AUp" class="arrows" src="resources/ArrowUp.png" />
+					</div>
+					<div>
+						<img id="ALeft" class="arrows" src="resources/ArrowLeft.png">
+						<img id="ADown" class="arrows" src="resources/ArrowDown.png">
+						<img id="ARight" class="arrows" src="resources/ArrowRight.png">
+					</div>				
+					<div>
+						<img id="ASpace" class="space" src="resources/Space.png">
+					</div>
+				</div>
+			</div>
+			<div id="meterPanel" class="hide">
+				<h1>Stamina Meter: <span id="staminaValue">100</span>%</h1>
+				<div id="meterBig"></div>
+			</div>
+		</div>
+	</div>
+	<div id="scorePage" class="hide"> 
+		<button class="back"> Back </button>
+		<h1> HOKAGE BOARD </h1>
+		<div id="scoreBoard">
+			
+		</div>
+		<span id=""></span>	
+	</div>
+	<div id="helpPage" class="hide"> 
+		<button class="back"> Back </button>
+		<h1> Grinding Tips/Controls</h1>
+		<div class="controls">
+			<h2>Controls: (HOLD)</h2>
+			<div class="labels">
+				<h2>Move Up</h2>
+				<h2>Move Down</h2>
+				<h2>Move Right</h2>
+				<h2>Move Left</h2>
+				<h2>Dance</h2>
+			</div>
+			<div class="symbols">
+				<span>
+					<img src="resources/ArrowUp.png" class="arrows"/>
+				</span>
+				<span>
+					<img src="resources/ArrowDown.png" class="arrows"/>
+				</span>
+				<span>
+					<img src="resources/ArrowLeft.png" class="arrows"/>
+				</span>
+				<span>
+					<img src="resources/ArrowRight.png" class="arrows"/>
+				</span>
+				<span>
+					<img src="resources/Space.png" class="space">
+				</span>
+			</div>
+		</div>
+		<div class="scoring">
+			<h2>Scoring:</h2>
+			<div class="labels">
+			</div>
+			<div class="symbols">
+				<span>
+					<img src="resources/WoofDance.gif" class=""/>
+					<h2>Woof = 300</h2>
+					
+				</span>
+				<span>
+					<img src="resources/MeowDance.gif" class=""/>
+					<h2>Meow = 200</h2>
+				</span>
+				<span>
+					<img src="resources/KokakDance.gif" class=""/>
+					<h2>Kokak = 100</h2>
+				</span>
+			</div>
+		</div>
+		<div class="mechanics">
+			<h2>Mechanics:</h2>
+			<p class="details">
+				Dance with as many girls as you can before the time ends, and make sure to avoid these guys <img src="resources/GuardRoams.gif" />, or else you'll get kicked out of the party!
+			</p>
+			<p class="details">
+				Also, make sure to avoid exceeding the girls' pressure points, <img src="resources/Yak.png"> or else you'll lose one of these <img src="resources/ConfidenceShots.gif" />. Losing all of these will make you lose the game.
+			</p>
+			<p>
+				When you dance <img src="resources/GaryDance.gif" />with a girl until her pressure point, your earned score is multiplied by two, and you will receive additional 10 seconds after dancing. Consecutively doing this with two or more girls will give you one more confidence shot.
+			</p>
+		</div>
+	</div>
+	<div id="aboutPage" class="hide"> 
+		<button class="back"> Back </button>
+		<h1>About</h1>
+		<p class="paragraph"> From 1/2 of the creators of Drunk Dave, the hit game of 2015, we bring to you "GRINDING GARY", the most controversial, sabog, and x-rated game ever created for a computer science project.</p>
+		<div class="storyline">
+			<h2> Storyline </h2>
+			<p>
+			Miami's biggest, wildest, wettest party, and jiggly-est party, GOT JIGGLE-Y 6.9, is coming near. Unfortunately, due to the limitations placed by the law, grinding is no longer allowed. However, the law can never stop a young grinding-legend from Mat-y. The greatest of all time grind master, Gary, is READY TO PARTY.
+			</p>
+		</div>
+		<div class="creators">
+			<h2> The Creators </h2>
+			<img id="creators" src="resources/Creators.jpg"/>
+			<p>
+			AgentProxy and Nudes are 3rd Year Computer Science. This game was created as a project and was not created to promote sexual harrasment, discrimination and violence against women. Remember to grind safely and just chill wut.
+			</p>
+		</div>
+	</div>
+
+	<audio controls hidden loop autoplay>
+		<source src="resources/shootingstars1.mp3" type="audio/mpeg"/>
+	Your browser does not support the audio element.
+	</audio>
+
+	<script src="GG.js" type="text/javascript"></script>
+	<script src="Menus.js" type="text/javascript"></script>
+
+</body>
+</html>
